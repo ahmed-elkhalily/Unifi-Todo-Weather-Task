@@ -3,8 +3,8 @@ import { getCurrentWeather, getNextFiveWeather } from "../helpers/weather";
 import { Container, Grid, Box, Typography, Paper } from "@mui/material";
 
 const Weather = () => {
-  const [currentWeather, setCurrentWeather] = useState("...loading");
-  const [nextFiveWeather, setNextFiveWeather] = useState("...loading");
+  const [currentWeather, setCurrentWeather] = useState("loading...");
+  const [nextFiveWeather, setNextFiveWeather] = useState("loading...");
 
   const apiKey = "4b4bb8a4a063f542e917df3942d7466b";
   const date = new Date();
