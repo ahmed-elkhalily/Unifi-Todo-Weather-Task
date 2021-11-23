@@ -8,6 +8,7 @@ import { blue, red, grey, green, teal } from "@mui/material/colors";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
+
 function App() {
   const [mode, setMode] = useState("light");
   const colorMode = useMemo(
