@@ -6,11 +6,9 @@ export const todoReducers = (state = initialState, action) => {
     case todoTypes.ADD_ITEM_TODO:
       return [...state, action.payload];
     case todoTypes.EDIT_ITEM_TODO:
-      console.log("edit", action.payload);
       const { id, title, description } = action.payload;
       return state.map((item, index) => {
         if (index + 1 === id) {
-          console.log("hi there", action.payload);
           item.title = title;
           item.description = description;
         }

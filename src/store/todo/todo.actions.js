@@ -24,9 +24,7 @@ export const completeTaskActoin = (taskId) => {
     payload: taskId,
   };
 };
-// //TODO: need to work wiht
 export const editTodoAction = (data) => {
-  console.log(data);
   return {
     type: todoTypes.EDIT_ITEM_TODO,
     payload: data,
