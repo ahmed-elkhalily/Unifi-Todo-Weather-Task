@@ -1,6 +1,6 @@
 import { useState, useMemo, createContext } from "react";
 import { Routes, Route } from "react-router-dom";
-import "./app.css";
+import "./App.css";
 import Navbar from "./components/Navbar.component";
 import Todo from "./pages/Todo.page";
 import Weather from "./pages/Weather.page";
