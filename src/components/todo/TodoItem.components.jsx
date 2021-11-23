@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   removeTodoAction,
@@ -21,22 +20,22 @@ import ArchiveIcon from "@mui/icons-material/Archive";
 import EditIcon from "@mui/icons-material/Edit";
 
 const TodoItem = ({
-  title,
-  description,
   setTitle,
   setDescription,
   id,
   setId,
-  inputMode,
   setInputMode,
+  setEditableDate,
 }) => {
   const todos = useSelector((state) => state);
   const dispatch = useDispatch();
 
   function handleEditMode(todoData) {
-    const { title, description } = todoData;
+    const { title, description, date } = todoData;
     setTitle(title);
     setDescription(description);
+    setEditableDate(date);
+
     setInputMode("edit");
   }
 
@@ -81,7 +80,7 @@ const TodoItem = ({
               <IconButton
                 onClick={() =>
                   handleEditMode({
-                    id: index,
+                    date: todo.createdAt,
                     title: todo.title,
                     description: todo.description,
                   })

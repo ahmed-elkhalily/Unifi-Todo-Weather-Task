@@ -13,6 +13,8 @@ const TodoForm = ({
   setId,
   inputMode,
   setInputMode,
+  editableDate,
+  setEditableDate,
 }) => {
   const [titleError, setTitleError] = useState(false);
   const [descriptionError, setDescriptionError] = useState(false);
@@ -44,11 +46,12 @@ const TodoForm = ({
         setInputMode("add");
         dispatch(
           editTodoAction({
-            id,
+            createdDate: editableDate,
             title,
             description,
           })
         );
+        setEditableDate(null);
       }
       setTitle("");
       setDescription("");

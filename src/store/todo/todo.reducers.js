@@ -6,9 +6,9 @@ export const todoReducers = (state = initialState, action) => {
     case todoTypes.ADD_ITEM_TODO:
       return [...state, action.payload];
     case todoTypes.EDIT_ITEM_TODO:
-      const { id, title, description } = action.payload;
-      return state.map((item, index) => {
-        if (index + 1 === id) {
+      const { createdDate, title, description } = action.payload;
+      return state.map((item) => {
+        if (item.createdAt === createdDate) {
           item.title = title;
           item.description = description;
         }

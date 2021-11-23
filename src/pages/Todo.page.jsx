@@ -9,6 +9,7 @@ const Todo = () => {
   const [description, setDescription] = useState("");
   const [inputMode, setInputMode] = useState("add");
   const [id, setId] = useState(0);
+  const [editableDate, setEditableDate] = useState(null);
 
   return (
     <Box>
@@ -23,6 +24,8 @@ const Todo = () => {
             setInputMode={setInputMode}
             id={id}
             setId={setId}
+            editableDate={editableDate}
+            setEditableDate={setEditableDate}
           />
           <TodoItem
             title={title}
@@ -33,6 +36,8 @@ const Todo = () => {
             setInputMode={setInputMode}
             id={id}
             setId={setId}
+            editableDate={editableDate}
+            setEditableDate={setEditableDate}
           />
         </Grid>
       </Container>
